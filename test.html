@@ -1,0 +1,40 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" 
+          content="width=device-width, initial-scale=1.0" />
+    <title>Web Cam</title>
+<script src="https://unpkg.com/html5-qrcode"></script>
+    <script>
+      function onScanSuccess(decodedText, decodedResult) {
+     console.log(`Code scanned = ${decodedText}`, decodedResult);
+}
+      document.addEventListener("DOMContentLoaded", () => {
+
+var html5QrcodeScanner = new Html5QrcodeScanner(
+  "qr-reader", { fps: 10, qrbox: 250 });
+html5QrcodeScanner.render(onScanSuccess);
+      });
+    </script>
+  </head>
+  
+  <style>
+
+  </style>
+  
+  <body>
+    <center>
+<!--       <div>
+        <video id="vid"></video>
+      </div>
+      <br />
+      <button id="but" autoplay>
+        Open WebCam
+      </button> -->
+      <div id="qr-reader" style="width: 600px"></div>
+    </center>
+  </body>
+</html>
