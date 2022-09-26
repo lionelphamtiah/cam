@@ -1,7 +1,7 @@
 # User manual push code to kintone
 
-npm install
+Step 1👍: npm install
 
-npm run generate:ppk
+Step 2👍: npm run generate:ppk
 
-npm run start
+Step 3👍: npm run start
